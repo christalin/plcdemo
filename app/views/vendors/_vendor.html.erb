@@ -1,0 +1,39 @@
+<!--<div class="box-table">
+<table class="table table-bordered"> -->
+
+<div class="responstable">
+<table class="table table-striped table-bordered">    
+	<thead>
+		<tr>
+			<th>VENDOR</th>
+            <th>KEY CONTACT</th>
+            <th>PHONE NUMBER</th>
+            <th>EVENT</th>
+		</tr>	
+    </thead>
+
+    <tbody>
+    	<% @vendors.each do |vendor| %>
+    	<tr>
+            <td class="btn-link text-left">
+                <div tabindex="0" data-toggle="popover" data-trigger="focus" title="Address" 
+                data-content="<%= vendor.address %>" >
+
+                    <%= vendor.name %>
+                </div>
+    		</td> 
+            <td><%= vendor.keycontact %></td>
+            <td><%= vendor.phoneno %></td>
+            <td><%= vendor.comments %></td>
+            <% if current_user.admin %>
+               <td class="btn-link text-left"><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_vendor_path(vendor) %></td>
+               <td class="btn-link text-left"><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>   
+        </tr>
+    	<% end %>	
+    </tbody>			
+</table>
+</div>
+
+
+

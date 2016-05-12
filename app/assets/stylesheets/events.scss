@@ -1,0 +1,133 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.box-table table{
+  border-collapse:collapse;
+  text-align:left;
+  width:100%;
+  margin:0;
+  padding:0;
+  background:#7f8c8d;
+  animation: responsive 5s infinite ease-in-out;
+}
+.box-table{
+  font:normal 12px/150% Arial, Helvetica, sans-serif;
+  overflow:hidden;
+  margin:0 auto;
+  display:block;
+  width:95%;
+  padding:2.5%;
+}
+.box-table table thead th{
+  background-color:#7f8c8d;
+  color:#bdc3c7;
+  text-align:center;
+  padding: 0.75em;
+  font-family: 'Vollkorn', serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 1.5em;
+  vertical-align: top;
+  border-left:0.25em double #95a5a6;
+
+}
+.box-table table tbody td,
+.box-table table tbody tr{
+  font-family: 'Vollkorn', serif;
+  font-size:1em;
+  border:none;
+  padding:1em;
+}
+.box-table table tbody tr:nth-child(odd){
+  background:#ecf0f1;
+  color:#95a5a6;
+}
+.box-table table tbody tr:nth-child(even){
+  background:#bdc3c7;
+  color:#7f8c8d;
+}
+.box-table table tbody tr a{
+  text-decoration:none;
+  color:#e67e22;
+}
+.box-table table tbody tr a:hover{
+  color:#d35400;
+}
+
+
+
+
+
+
+
+
+
+
+.responstable {
+    margin: 1em 0;
+    width: 80%;
+    overflow: hidden; 
+    background-color: #FFFFFF; 
+    
+    tr {
+      &:nth-child(odd) { // highlight the odd rows with a color
+      }  
+    }
+  
+    th {
+ //     display: none; // hide all the table header for mobile
+            padding: 1em;  
+      &:first-child { // show the first table header for mobile
+        display: table-cell;
+       // text-align: center;
+      }
+      &:nth-child(2) { // show the second table header but replace the content with the data-th from the markup for mobile
+        display: table-cell;
+        span {display:none;}
+        &:after {content:attr(data-th);}
+      }
+        &:nth-child(2) { // hide the data-th and show the normal header for tablet and desktop
+          span {display: block;}
+          &:after {display: none;}
+        }
+      }
+    }
+  
+    td {
+      display: block; // display the table data as one block for mobile
+      word-wrap: break-word;
+      max-width: 7em;
+      &:first-child { 
+        display: table-cell; // display the first one as a table cell (radio button) for mobile
+       // text-align: center;
+        
+      }
+        
+      }
+    
+  
+    th, td {
+      text-align: left;
+      margin: .5em 1em;  
+        display: table-cell; // show the table as a normal table for tablet and desktop
+        padding: 1em;
+      }
+     
+     
+
+// General styles
+
+body {
+  padding: 0 2em;
+  font-family: Arial, sans-serif;
+  color: #024457;
+  background: #f2f2f2;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: normal;
+  color: #024457;
+  span {color: #167F92;}
+}

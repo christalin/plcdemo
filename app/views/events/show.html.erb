@@ -1,0 +1,30 @@
+
+
+
+<div class="responstable">
+<table class="table responstable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Conductedby</th>
+          <th>PhoneNos</th>
+          <th>Description</th>
+       </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @event.name %></td>
+          <td><%= @event.conductedby %></td>
+          <td><%= @event.phonenos %></td>
+          <td><%= @event.description %></td>
+        </tr>
+        </tbody>
+</table> 
+</div>
+
+
+<%= link_to 'Back', events_path %>
+
+
+
+

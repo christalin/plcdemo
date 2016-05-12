@@ -1,0 +1,18 @@
+<div class="btn btn-success">
+    <%= link_to 'New Image', new_gallery_path %>
+</div>
+<br>    
+<%= will_paginate @galleries %>
+<br>
+
+<div class="container-fluid">
+
+<div class="row">
+	  <%= render @galleries %>
+
+</div>  
+</div>          
+        
+ 
+  
+         

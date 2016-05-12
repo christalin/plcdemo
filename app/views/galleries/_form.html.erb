@@ -1,0 +1,6 @@
+<%= simple_form_for(@gallery, html: {class: "form-signin"}) do |f| %>
+  <%= f.error_notification %>
+
+    <%= f.input :image %>
+    <%= f.submit "Save", class: "btn btn-primary btn-sm" %>
+<% end %>

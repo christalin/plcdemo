@@ -1,0 +1,9 @@
+<div class="row">
+  <%= render "plcdirectory" %>
+</div>
+
+<% if current_user.admin %>
+   <div class="btn btn-success">
+       <b><%= link_to 'New Member', new_plcdirectory_path %></b>
+   </div>  
+<% end %>    

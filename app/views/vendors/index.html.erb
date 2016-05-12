@@ -1,0 +1,11 @@
+<!--<span class="alert alert-info"><sup>*</sup>Click on vendor name to view Address</span><br><br>
+-->
+<div class="row">
+  <%= render "vendor" %>
+</div>  
+
+<% if current_user.admin %>
+   <div class="btn btn-success">
+       <b><%= link_to 'New Vendor', new_vendor_path %></b>
+   </div> 
+<% end %>    
